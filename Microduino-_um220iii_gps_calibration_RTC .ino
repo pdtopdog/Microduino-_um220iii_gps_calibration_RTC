@@ -232,7 +232,7 @@ void loop() {
             * 基姆拉尔森计算公式
             */
             if(gps.Month ==1||gps.Month ==2) {
-             gps.Month +=12;
+             gps.Month=(gps.Month==1?13:14);;
              gps.Year--;
              }
              int Weekday=(gps.Day+2*gps.Month +3*(gps.Month +1)/5+gps.Year+gps.Year/4-gps.Year/100+gps.Year/400)%7;                     
