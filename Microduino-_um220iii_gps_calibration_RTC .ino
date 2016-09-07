@@ -30,10 +30,11 @@ Rtc_Pcf8563 rtc;
      
 void setup() { 
   Serial.begin(115200);
-  while(!Serial1){           
+  while(!Serial){           
     ;
   }
-  Serial1.begin(9600);  
+  Serial1.begin(115200);  
+  rtc.initClock();
   }
 
      
