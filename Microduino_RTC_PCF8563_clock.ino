@@ -8,7 +8,7 @@ Rtc_Pcf8563 rtc;
 
 void setup() { 
   Serial.begin(115200);
-  Serial1.begin(9600);
+  Serial1.begin(115200);
   while(!Serial1){;}   
   }
 
@@ -20,7 +20,7 @@ void loop()
          u8g.setPrintPos(5,15); 
          u8g.print("BEIJING TIME:");        
          u8g.setPrintPos(0,35);    
-         u8g.print(rtc.formatDate());
+         u8g.print(rtc.formatDate(RTCC_DATE_ASIA));
 
           u8g.setPrintPos(95,35);    
           switch(rtc.getWeekday()){
@@ -36,7 +36,7 @@ void loop()
                   
          u8g.setFont(u8g_font_fub20);
          u8g.setPrintPos(8,60);                
-         u8g.print(rtc.formatTime());                  
+         u8g.print(rtc.formatTime(RTCC_TIME_HMS));                  
          }  
          while( u8g.nextPage() );                                                                                    
  } 
