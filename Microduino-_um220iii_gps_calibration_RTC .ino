@@ -13,13 +13,13 @@ struct GNZDA{
   String hour;                         
   String minute;         
   String second;
-  int Hour; 
-  int Minute;         
-  int Second; 
   String year;
   String month;
   String day; 
-  String yr; 
+  String yr;
+  int Hour; 
+  int Minute;         
+  int Second;   
   int YR;  
   int Year;
   int Month;
